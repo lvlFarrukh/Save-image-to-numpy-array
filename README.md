@@ -1,1 +1,1 @@
-# Save-image-to-numpy-array
+# Save-images-to-numpy-array
