@@ -20,9 +20,12 @@ def pick_image():
     img_name = []
     fld = []
     root_dir = '.\photos'
-    for dirName, subdirList, fileList in os.walk(root_dir):
-        img_name.append(fileList)
-    return img_name, dirName
+    try: 
+        for dirName, subdirList, fileList in os.walk(root_dir):
+            img_name.append(fileList)
+        return img_name, dirName
+    except:
+        print(f"{root_dir} directory is not found")
 
 def np_array(data):
      ar = np.zeros([len(data),200,200,3], dtype='int16')
